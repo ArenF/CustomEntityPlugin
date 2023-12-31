@@ -4,6 +4,7 @@ import net.md_5.bungee.api.ChatColor;
 import net.minecraft.server.v1_16_R3.*;
 import org.aren.pathfinder.PathfinderGoalPet;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
 import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
@@ -17,7 +18,7 @@ public class UndeadSkeleton extends EntityCreature {
         this.setPosition(location.getX(), location.getY(), location.getZ());
 
         this.setBaby(true);
-        this.setInvulnerable(true);
+        this.setItem(EnumItemSlot.MAINHAND, new ItemStack(Material.DIAMOND_SWORD));
     }
 
     @Override
