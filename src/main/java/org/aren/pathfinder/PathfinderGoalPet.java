@@ -31,7 +31,7 @@ public class PathfinderGoalPet extends PathfinderGoal {
             return false;
         else if (this.a.getDisplayName() == null)
             return false;
-        else if (this.b.h(this.a) > (double) (this.g * this.g)) {
+        else if (!(this.b.h(this.a) > (double) (this.g * this.g))) {
 //            만약 b 와 a의 거리가 범위의 제곱 이상이 아닐 때
             a.setPosition(this.b.locX(), this.b.locY(), this.b.locZ());
             return false;
