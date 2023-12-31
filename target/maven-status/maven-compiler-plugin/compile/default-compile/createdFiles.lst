@@ -1,0 +1,4 @@
+org\aren\customentityplugin\CustomEntityPlugin.class
+org\aren\entity\UndeadSkeleton.class
+org\aren\pathfinder\PathfinderGoalPet.class
+org\aren\command\PetCommandExecutor.class

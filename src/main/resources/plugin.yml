@@ -1,0 +1,8 @@
+name: CustomEntityPlugin
+version: '${project.version}'
+main: org.aren.customentityplugin.CustomEntityPlugin
+api-version: '1.16'
+
+commands:
+  pet:
+    description: pet command
