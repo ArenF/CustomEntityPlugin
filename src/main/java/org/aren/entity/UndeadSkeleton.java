@@ -30,7 +30,7 @@ public class UndeadSkeleton extends EntityCreature {
 
         this.goalSelector.a(1, new PathfinderGoalNearestAttackableTarget<EntityLiving>(this, EntityLiving.class, true));
         this.goalSelector.a(2, new PathfinderGoalRandomLookaround(this));
-        this.goalSelector.a(3, new PathfinderGoalMeleeAttack(this, 4.0f, true));
+        this.goalSelector.a(3, new PathfinderGoalMeleeAttack(this, 1.0f, true));
     }
 
     public void setOwner(Player player) {
