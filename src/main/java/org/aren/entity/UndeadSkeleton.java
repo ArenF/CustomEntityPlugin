@@ -24,12 +24,13 @@ public class UndeadSkeleton extends EntityCreature {
     @Override
     protected void initPathfinder() {
         this.goalSelector.a(0, new PathfinderGoalFloat(this));
+//        this.goalSelector.a(2, new PathfinderGoalLookAtPlayer(this, EntityHuman.class, 8.0F));
+//        this.goalSelector.a(3, new PathfinderGoalRandomLookaround(this));
+//        this.goalSelector.a(1, new PathfinderGoalPet(this, 1.0, 25));
 
-        this.goalSelector.a(2, new PathfinderGoalLookAtPlayer(this, EntityHuman.class, 8.0F));
-        this.goalSelector.a(3, new PathfinderGoalRandomLookaround(this));
-        this.goalSelector.a(4, new PathfinderGoalNearestAttackableTarget<EntityZombie>(this, EntityZombie.class, true));
-        this.goalSelector.a(5, new PathfinderGoalHurtByTarget(this));
-        this.goalSelector.a(1, new PathfinderGoalPet(this, 1.0, 25));
+        this.goalSelector.a(1, new PathfinderGoalPet(this, 1.0, 16));
+        this.goalSelector.a(2, new PathfinderGoalRandomLookaround(this));
+        this.goalSelector.a(3, new PathfinderGoalMeleeAttack(this, 6.0f, true));
     }
 
     public void setOwner(Player player) {
